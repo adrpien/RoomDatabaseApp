@@ -1,9 +1,10 @@
-package com.adrpien.roomdatabaseapp
+package com.adrpien.roomdatabaseapp.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
+import com.adrpien.roomdatabaseapp.room.Person
+import com.adrpien.roomdatabaseapp.room.PeopleRepository
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.runBlocking
 
@@ -28,6 +29,8 @@ class PeopleViewModel(application: Application): AndroidViewModel(application) {
         peopleRepository.deleteAll()
     }
 
+
+    // await is suspended functions so that we have to use runBlocking
     fun getAll(): LiveData<List<Person>> = runBlocking {
         allPeople.await()
     }

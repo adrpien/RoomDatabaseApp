@@ -1,11 +1,11 @@
 package com.adrpien.roomdatabaseapp
 
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.adrpien.roomdatabaseapp.room.Person
 
 class PeopleRecyclerViewAdapter(private val listOfPeople: List<Person>): RecyclerView.Adapter<AdapterViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterViewHolder {

@@ -1,4 +1,4 @@
-package com.adrpien.roomdatabaseapp
+package com.adrpien.roomdatabaseapp.room
 
 import android.content.Context
 import androidx.room.Database
@@ -16,6 +16,8 @@ abstract class PeopleDatabase: RoomDatabase() {
 
         private var instance: PeopleDatabase? = null
 
+
+        // fallbackToDestructiveMigration - Room can can destroy and recreate database if migration is not possible
         // Create database singleton
         fun getInstance(context: Context): PeopleDatabase?{
             if(instance == null){

@@ -1,4 +1,4 @@
-package com.adrpien.roomdatabaseapp
+package com.adrpien.roomdatabaseapp.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

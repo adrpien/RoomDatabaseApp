@@ -1,8 +1,13 @@
-package com.adrpien.roomdatabaseapp
+package com.adrpien.roomdatabaseapp.room
 
 import android.app.Application
 import androidx.lifecycle.LiveData
 import kotlinx.coroutines.*
+
+/*
+Repository class is hub class, which can resolve conflicts between data sources
+(such as persistent models, web services, and caches) and centralize changes to this data.
+ */
 
 class PeopleRepository (application: Application) {
 

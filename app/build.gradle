@@ -41,6 +41,11 @@ android {
 
 dependencies {
 
+
+
+    // Coroutine depencies
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
     // Room Database dependecies
     def roomVersion = '2.4.2'
     implementation("androidx.room:room-runtime:$roomVersion")
